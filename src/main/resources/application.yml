@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: "jdbc:h2:mem:sso_test"
+    driverClassName: "org.h2.Driver"
+    username: sso_test
+    password: sso_test
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+
+  liquibase:
+    enabled: true
+    changelog: "classpath:database/changelog/changelog.xml"
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 864031947892-u2889ad2hok8gmrmvffgdeo156d48d81.apps.googleusercontent.com
+            client-secret: fQk0xVJAy7hc7TwLGl-jpi6B
